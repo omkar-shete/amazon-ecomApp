@@ -1,0 +1,34 @@
+.product{
+  /* border: 1px solid black; */
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: flex-end; */
+  max-width: 50vw;
+  /* max-height: 60vh; */
+  padding: 1.5rem;
+  margin: 1rem;
+}
+
+.product__info{
+  margin-bottom: 3%;
+}
+
+.product > img{
+  max-height: 50vh;
+  min-height: 200px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 5%;
+}
+
+.product > button{
+  margin-bottom: 2%;
+  max-width: 250px;
+  background-color: orange;
+  padding: 0.5rem;
+  font-weight: bold;
+  border: 1px solid black;
+}
