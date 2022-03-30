@@ -9,44 +9,59 @@ import OrderSummaryBox from '../OrderSummaryBox/OrderSummaryBox';
 export default function CheckoutPage() {
 
   //data store
-  const[{cart}, dispatch] = UseStateValue();
+  const[{cart,user}, dispatch] = UseStateValue();
 
 
   //---------------------return------------------
   return (
     <div className='checkout'>
 
-      {/* LIST OF ITEMS---- */}
-      <div className="checkout__left">
-        {cart.length===0 ? (
-          <div>
-            <h2>Your shopping cart is empty</h2>
-            <p>Click "Add to cart" button to buy items.</p>
-          </div>
-          ):(
-          <div>
-            <h2>Your shopping cart</h2>
-            {/* list of products  */}
-            {cart.map(cartItem=>(
-              <CheckoutProduct
-                id={cartItem.id}
-                title={cartItem.title}
-                price={cartItem.price}
-                stars={cartItem.stars}
-                img={cartItem.img}
-                key={cartItem.id}
-              />
-            ))}
-          </div>
-          )}
-      </div>
+      {/* clear cart when logged out-- */}
+      {!user ? (
+        <div className="checkout__left">
+          <h2>Please log in to see your cart..</h2>
+        </div>
+      ) : (
 
-      {/* CART DETAILS ----- */}
-      <div className="checkout__right">
-        {cart?.length>0 && (
-          <OrderSummaryBox/>
-        )}
-      </div>
+        // user present-> then next conitionals
+        
+        <>
+        {/* LIST OF ITEMS---- */}
+        <div className="checkout__left">
+          {cart.length===0 ? (
+            <div>
+              <h2>Your shopping cart is empty</h2>
+              <p>Click "Add to cart" button to buy items.</p>
+            </div>
+            ):(
+            <div>
+              <h2>Your shopping cart</h2>
+              {/* list of products  */}
+              {cart.map(cartItem=>(
+                <CheckoutProduct
+                  id={cartItem.id}
+                  title={cartItem.title}
+                  price={cartItem.price}
+                  stars={cartItem.stars}
+                  img={cartItem.img}
+                  key={cartItem.id}
+                />
+              ))}
+            </div>
+            )}
+        </div>
+
+        {/* CART DETAILS ----- */}
+        <div className="checkout__right">
+          {cart?.length>0 && (
+            <OrderSummaryBox/>
+          )}
+        </div>
+        </>
+
+
+      )}
+
       
     </div>
   )
