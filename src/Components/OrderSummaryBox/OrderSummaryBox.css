@@ -1,0 +1,28 @@
+.OrderSummaryBox{
+  /* border: 1px solid black; */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.OrderSummaryBox > button{
+  background-color: orange;
+  padding: 0.5rem;
+  font-weight: bold;
+  border: 1px solid black;
+  margin-top: 1rem;
+}
+
+.OrderSummaryBox__subtotal{
+  margin: auto;
+  margin-bottom: 0.5rem;
+  color: rgb(90, 90, 90);
+}
+
+/* .OrderSummaryBox__value{ */
+  /* margin-top: 0.5rem; */
+/* } */

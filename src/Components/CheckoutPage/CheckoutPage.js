@@ -1,7 +1,8 @@
 import React from 'react';
 import { UseStateValue } from '../../Context/StateProvider';
 import CheckoutProduct from '../CheckoutProduct/CheckoutProduct';
-
+import './CheckoutPage.css';
+import OrderSummaryBox from '../OrderSummaryBox/OrderSummaryBox';
 
 
 //
@@ -41,7 +42,11 @@ export default function CheckoutPage() {
       </div>
 
       {/* CART DETAILS ----- */}
-      <div className="checkout__right"></div>
+      <div className="checkout__right">
+        {cart?.length>0 && (
+          <OrderSummaryBox/>
+        )}
+      </div>
       
     </div>
   )

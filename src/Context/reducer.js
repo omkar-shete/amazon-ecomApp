@@ -1,25 +1,30 @@
-//defining the initial state of the data store
+//1.defining the initial state of the data store
 export const initialState = {
-  cart:[{
-    id:"random04",
-    title:"boAt Bassheads 242 in Ear Wired Earphones with Mic(Carbon Black)",
-    price:"1,199",
-    stars:5,
-    img:"https://m.media-amazon.com/images/I/81oztXbAKaL._SX679_.jpg"
-  },
-  {
-    id:"random04",
-    title:"boAt Bassheads 242 in Ear Wired Earphones with Mic(Carbon Black)",
-    price:"1,199",
-    stars:5,
-    img:"https://m.media-amazon.com/images/I/81oztXbAKaL._SX679_.jpg"
-  }],
+  cart:[
+  //   {
+  //   id:"random04",
+  //   title:"boAt Bassheads 242 in Ear Wired Earphones with Mic(Carbon Black)",
+  //   price:1199,
+  //   stars:5,
+  //   img:"https://m.media-amazon.com/images/I/81oztXbAKaL._SX679_.jpg"
+  // },
+  ],
   user: null,
 }
 
 
+//array manipulation...bcz cart array is here
+//nothing to do with reducer....
+//array.reduce is a seperate method
+export const getCartTotal = (cart) => (
+  cart?.reduce( (prevValue, cartItem) => prevValue + cartItem.price ,0)
+  //start at prevValue=0 and keep adding cartItem.price on loop
+)
 
-//reducer fn: 
+
+
+
+//2.reducer fn: 
 //takes actiontypes and returns execution logic on the state using switch-cases
 
 const reducer = (state, action) => {
