@@ -26,7 +26,7 @@
 
 .product > button{
   margin-bottom: 2%;
-  max-width: 250px;
+  /* max-width: 250px; */
   background-color: orange;
   padding: 0.5rem;
   font-weight: bold;

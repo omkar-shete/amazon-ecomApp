@@ -14,13 +14,13 @@ export default function HomePage() {
         src='https://m.media-amazon.com/images/I/61aUfpZteZL._SX3000_.jpg' //from amzon website
         // src='https://crazylister.com/wp-content/uploads/2018/07/How-to-Sell-on-Amazon.png' 
         // src='https://www.ecomcrew.com/wp-content/uploads/2019/04/heroselling-on-amazon.png'
-        alt="hero image" />
+        alt="hero" />
 
 
         {/* PRODUCTS ROWS id,title,price,stars,img,addbtn -------------- */}
         <div className="product__row">
           <Product
-            id
+            id="random01"
             title="Nest Bedding Leather Bean Bag with Foot Stool Pouf - Classic Gamer Teardrop Beanbag Lounger for Home , Office , Bedroom & Room - XL - with Beans - Blue"
             price={1900}
             stars={4}
@@ -28,7 +28,7 @@ export default function HomePage() {
           />
 
           <Product
-            id
+            id="random02"
             title="Shri Handicrafts 3' Wooden Showpiece Beautiful Elephant Up Trunk Hand Crafted Artistic Home Office Decor Article (Brown)"
             price="899"
             stars={5}
@@ -39,7 +39,7 @@ export default function HomePage() {
         {/* 2nd row */}
         <div className="product__row">
         <Product
-            id
+            id="random03"
             title="101 Witty Stories Of Akbar and Birbal - Collection Of Humorous Stories For Kids"
             price="299"
             stars={3}
@@ -47,7 +47,7 @@ export default function HomePage() {
           />
           
           <Product
-            id
+            id="random04"
             title="boAt Bassheads 242 in Ear Wired Earphones with Mic(Carbon Black)"
             price="1,199"
             stars={5}
@@ -55,7 +55,7 @@ export default function HomePage() {
           /> 
 
           <Product
-            id
+            id="random05"
             title="JASMEY Homes - Ceramic Coffee Mug Set of 2 | Microwave & Dishwasher Safe (Solid Green)"
             price="580"
             stars={4}
@@ -66,7 +66,7 @@ export default function HomePage() {
         {/* 3rd row */}
         <div className="product__row">
         <Product
-            id
+            id="random06"
             title="iQOO Z6 5G (Dynamo Black, 4GB RAM, 128GB Storage) | Snapdragon® 695 5G | 120Hz FHD+ Display | 5000mAh Battery | No Cost EMI Upto 9 Months"
             price="15,499"
             stars={4}

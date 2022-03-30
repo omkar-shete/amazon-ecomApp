@@ -3,9 +3,20 @@ import './Header.css';
 import { Link } from "react-router-dom";
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { UseStateValue } from '../../Context/StateProvider';
 
 
 export default function Header() {
+
+  //accessing the data store vars....looks like useState
+  //gives me [state, dispatch]..destructured to {cart}
+  const[{cart}, dispatch] = UseStateValue();
+
+  console.log("cart>>",cart);
+
+
+
+  //-----------------RET---------------------
   return (
     <div className='header'>
 
@@ -58,7 +69,7 @@ export default function Header() {
       {/* CART -------icon&no------------------------ */}
       <div className="header__cart">
         <Link className='header__cartLink' to="/checkout">
-          <span>0</span>        
+          <span>{cart?.length}</span>        
           <ShoppingCartOutlinedIcon />        
         </Link>
       </div>

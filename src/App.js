@@ -2,6 +2,7 @@ import './App.css';
 import { Routes, Route, Link } from "react-router-dom";
 import Header from './Components/Header/Header';
 import HomePage from './Components/HomePage/HomePage';
+import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
         <Route path='/checkout' 
           element={<div>
             <Header/> 
-            <h1>checkout</h1>
+            <CheckoutPage/>
           </div>} />
         
       </Routes>      

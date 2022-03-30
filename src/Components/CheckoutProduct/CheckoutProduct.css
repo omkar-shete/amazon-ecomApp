@@ -1,0 +1,24 @@
+.CheckoutProduct{
+  display: flex;
+  background-color: white;
+  width: 60vw;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.CheckoutProduct__img{
+  width: 10vw;
+  min-width: 120px;
+  max-width: 240px;
+  object-fit: contain;
+  margin-right: 0.5rem;
+}
+
+.CheckoutProduct__info > button{
+  margin-top: 2%;
+  max-width: 250px;
+  background-color: lightgray;
+  padding: 0.25rem;
+  font-weight: bold;
+  border: 1px solid black;
+}
