@@ -7,22 +7,26 @@ import './Product.css';
 export default function Product( {id,title,price,stars,img} ) {
 
   //data store called
-  const[{cart}, dispatch] = UseStateValue();
+  const[{cart,user}, dispatch] = UseStateValue();
   
 
   //add to cart
   const addToCart = () => {
-    //dispatching actiontype & the item thr an obj
-    dispatch({
-      type: "ADD_TO_CART",
-      item:{
-        id:id,
-        title:title,
-        price:price,
-        stars:stars,
-        img:img,
-      }
-    });
+    if (!user) {
+      alert("Please login to add items to the cart");
+    } else {
+      //dispatching actiontype & the item thr an obj
+      dispatch({
+        type: "ADD_TO_CART",
+        item:{
+          id:id,
+          title:title,
+          price:price,
+          stars:stars,
+          img:img,
+        }
+      });      
+    }
   }
 
 

@@ -1,0 +1,56 @@
+.LoginPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 2%; */
+}
+
+.LoginPage__logo{
+  margin: 1rem;
+  width: 10vw;
+  min-width: 80px;
+  max-width: 130px;
+  padding: 1rem 1rem 0.5rem;
+  object-fit: contain;
+}
+
+.LoginPage__signInForm{
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  min-width: 240px;
+  max-width: 360px;
+  margin: auto;
+  background-color: white;
+  border: 1px solid lightgray;
+  padding: 1rem;
+}
+
+.LoginPage__signInForm > input{
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.LoginPage__signInForm > button{
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.LoginPage__signInForm > h5{
+  margin-bottom: 0.5rem;
+}
+
+.LoginPage__signInForm > p{
+  margin-top: 0.5rem;
+}
+
+.LoginPage__signInBtn{
+  background-color: orange;
+  font-weight: bold;
+  border: 1px solid black;
+  /* margin-bottom: 0.5rem; */
+}
+
+/* .LoginPage__createBtn{ */
+  /* background-color: gray; */
+/* } */

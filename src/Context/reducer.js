@@ -32,6 +32,13 @@ const reducer = (state, action) => {
   console.log("action>>" ,action);
   //
   switch (action.type) {
+    case "SET_USER":
+      //updates 'user' in the state
+      return{
+        ...state,
+        user: action.user,
+      }
+
     case "ADD_TO_CART":
       //add cart logic
       //returing the new data store state
@@ -53,12 +60,14 @@ const reducer = (state, action) => {
         //item not present
         console.warn(`Item not present in the cart, id:${action.id}`)
       }
-
+      //
       return{
         ...state,
         cart: newCart,
       };
       // break;
+
+
     default:
       return state;
   }
